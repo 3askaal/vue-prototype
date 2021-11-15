@@ -15,22 +15,22 @@
 <script lang="ts">
 import Vue from 'vue'
 import { styled } from '@egoist/vue-emotion'
-import { COLORS, SPACINGS } from '~/design'
+import { COLOR, SPACING } from '~/design'
 
 export const Card = styled('div')({
-  border: `1px solid ${COLORS.primary}`
+  border: `1px solid ${COLOR.primary}`
 })
 
 export const CardHeader = styled('div')({
-  padding: SPACINGS.xxs
+  padding: SPACING.xxs
 })
 
 export const CardContent = styled('div')({
-  padding: SPACINGS.xxs
+  padding: SPACING.xxs
 })
 
 export const CardFooter = styled('div')({
-  padding: SPACINGS.xxs
+  padding: SPACING.xxs
 })
 
 export default Vue.extend({

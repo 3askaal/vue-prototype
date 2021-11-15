@@ -1,4 +1,4 @@
-export const SPACINGS = {
+export const SPACING = {
   xxs: '.125rem',
   xs: '.25rem',
   s: '.5rem',
