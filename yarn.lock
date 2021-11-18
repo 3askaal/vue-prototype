@@ -1625,6 +1625,20 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@styled-system-ts/core@^0.3.0":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@styled-system-ts/core/-/core-0.3.1.tgz#35bca67163a01f638b6e5d0b65494688e4ae5088"
+  integrity sha512-PGkiAZYQiSramx/DGBRhmIP51P2HMhkmyEKCNt3MlVwyJWAd8mDuwK5jl5C78mBUxQczCNlyuw66fa/CR1YyqA==
+  dependencies:
+    object-assign "^4.1.1"
+
+"@styled-system-ts/css@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@styled-system-ts/css/-/css-0.3.1.tgz#8d0343f30c23ffcf995fddbaef7273f1bcefaac5"
+  integrity sha512-yOfSC1N5/f2w+/X3OI+5MTMrHd/Z4ERNhji2MVW98szvTqJ0roen3unu31Y9qLyrxw+EtxLcewBiVrj6IxxWew==
+  dependencies:
+    "@styled-system-ts/core" "^0.3.0"
+
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"

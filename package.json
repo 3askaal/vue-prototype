@@ -12,6 +12,7 @@
   "dependencies": {
     "@egoist/vue-emotion": "^0.6.2",
     "@nuxtjs/style-resources": "^1.2.1",
+    "@styled-system-ts/css": "^0.3.1",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7"
   },
