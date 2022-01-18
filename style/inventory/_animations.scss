@@ -1,0 +1,9 @@
+$duration: (
+  s: 0.2s,
+  m: 0.4s,
+  l: 0.6s
+);
+
+@function duration($key) {
+  @return map-get($duration, $key)
+}

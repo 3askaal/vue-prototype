@@ -1,0 +1,12 @@
+// this util can do a deep map-get and gives an error when a key does not exist.
+
+@function get($map, $keys...) {
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @error '"#{$key}" is not a valid option. The available options are: #{map-keys($map)}.';
+    }
+    $map: map-get($map, $key);
+  }
+
+  @return $map
+}

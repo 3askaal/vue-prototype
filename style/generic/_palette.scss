@@ -1,0 +1,10 @@
+@each $name, $value in $palette {
+  .color-#{$name} {
+    color: $value !important;
+  }
+
+  .bg-#{$name} {
+    background-color: $value !important;
+    color: text-color($value) !important;
+  }
+}

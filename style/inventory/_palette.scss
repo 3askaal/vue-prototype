@@ -1,0 +1,25 @@
+$palette: (
+  red: get($red, 700),
+  pink: get($pink, 500),
+  purple: get($purple, 400),
+  deep-purple: get($deep-purple, 400),
+  indigo: get($indigo, 400),
+  blue: get($blue, 400),
+  light-blue: get($light-blue, 400),
+  cyan: get($cyan, 400),
+  teal: get($teal, 400),
+  green: get($green, 400),
+  light-green: get($light-green, 400),
+  lime: get($lime, 400),
+  yellow: get($yellow, 500),
+  amber: get($amber, 400),
+  orange: get($orange, 400),
+  deep-orange: get($deep-orange, 400),
+  brown: get($brown, 400),
+  gray: get($gray, 400),
+  blue-grey: get($blue-grey, 400)
+);
+
+@function palette($key) {
+  @return map-get($palette, $key);
+}

@@ -1,0 +1,7 @@
+@each $name, $value in $states {
+  .state-#{$name} {
+    color: $value;
+    background-color: rgba($value, .05);
+    border-color: $value;
+  }
+}

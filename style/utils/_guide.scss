@@ -1,0 +1,7 @@
+@if not variable-exists(colors) {
+  @warn "$colors map not defined, using default";
+}
+
+@if not variable-exists(fonts) {
+  @warn "$fonts map not defined, using default";
+}

@@ -1,0 +1,16 @@
+$colors: (
+  primary: palette(indigo),
+  secondary: palette(teal)
+);
+
+$theme: (
+  border: 1px solid color(primary),
+  padding: space(s),
+  radius: 3px,
+  duration: duration(s),
+  easing: ease-in-out
+);
+
+@function theme($key) {
+  @return map-get($theme, $key)
+}

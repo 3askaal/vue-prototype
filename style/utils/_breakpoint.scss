@@ -1,0 +1,56 @@
+// Breakpoint mixin
+
+@mixin breakpoint($first, $second: false) {
+
+  // one given value will compile to min-width
+  @if length($first) == 1 and $second == false {
+    // get value
+    $first: get($breakpoints, $first);
+
+    @media (min-width: $first) {
+      @content;
+    }
+  }
+
+  // two given values will compile to min-width & max-width
+  @if $first and $second {
+    // get first value
+    $first: get($breakpoints, $first);
+    // get first value
+    $second: get($breakpoints, $second);
+    // subtract 1px on max-width so queries don't conflict
+    $second: $second - 1px;
+
+    @media (min-width: $first) and (max-width: $second) {
+      @content;
+    }
+  }
+
+  $keyword: nth($first, 1);
+
+  // keyword 'min' will compile value to min-width
+  @if $keyword == min {
+    // get the size key
+    $value: nth($first, 2);
+    // get actual value
+    $value: get($breakpoints, $value);
+
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+
+  // keyword 'max' will compile value to max-width
+  @if $keyword == max {
+    // get the size key
+    $value: nth($first, 2);
+    // get actual value
+    $value: get($breakpoints, $value);
+    // subtract 1px on max-width so queries don't conflict
+    $value: $value - 1px;
+
+    @media (max-width: $value) {
+      @content;
+    }
+  }
+}

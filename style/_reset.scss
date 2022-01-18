@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+select {
+  background: transparent;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  color: inherit;
+
+  option {
+    color: inherit;
+
+    &:disabled {
+      color: inherit;
+    }
+
+    &:checked {
+      color: white;
+    }
+  }
+}
+
+input,
+select {
+  &:-webkit-autofill {
+    box-shadow: none;
+    -webkit-text-fill-color: color(primary);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

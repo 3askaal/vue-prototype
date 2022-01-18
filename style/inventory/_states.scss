@@ -1,0 +1,8 @@
+$states: (
+  success: get($palette, green),
+  danger: get($palette, red)
+);
+
+@function state($key) {
+  @return map-get($states, $key);
+}

@@ -1,0 +1,36 @@
+$black: lighten(black, 10%);
+$white: darken(white, 5%);
+
+$grey: darken(white, 30%);
+$grey-darker: darken(white, 40%);
+
+$background: darken(white, 90%);
+
+$colors: (
+  primary: get($palette, green),
+  secondary: get($palette, deep-purple)
+);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+@function light($color) {
+  @return lighten(color($color), 5%);
+}
+
+@function lighter($color) {
+  @return lighten(color($color), 10%);
+}
+
+@function dark($color) {
+  @return darken(color($color), 5%);
+}
+
+@function darker($color) {
+  @return darken(color($color), 10%);
+}
+
+@function transparent($color) {
+  @return rgba(color($color), 0.25);
+}

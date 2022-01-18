@@ -1,0 +1,61 @@
+// Settings
+$columns: 12;
+$gutter: 30px;
+$halfGutter: $gutter / 2;
+$spanSize: 100 / $columns; // 8.33333
+
+.row {
+  margin-left: -$halfGutter;
+  margin-right: -$halfGutter;
+}
+
+@mixin colStyle {
+  float: left;
+  margin-left: $halfGutter;
+  margin-right: $halfGutter;
+}
+
+@function calcWidth($amount) {
+  @return percentage($spanSize * $amount) / 100;
+}
+
+@mixin col($amount) {
+  $totalWidth: calcWidth($amount);
+  width: calc(#{$totalWidth} - #{$gutter});
+}
+
+@mixin right($amount) {
+  $totalWidth: calcWidth($amount);
+  $halfGutter: $gutter / 2;
+  margin-right: calc(#{$totalWidth} + #{$halfGutter});
+}
+
+@mixin left($amount) {
+  $totalWidth: calcWidth($amount);
+  $halfGutter: $gutter / 2;
+  margin-left: calc(#{$totalWidth} + #{$halfGutter});
+}
+
+
+@for $column from 1 through $columns {
+  .col#{$column} {
+    @include colStyle;
+    @include col($column);
+  }
+  .right#{$column} { @include right($column); }
+  .left#{$column} { @include left($column); }
+}
+
+
+@each $key, $breakpoint in $breakpoints {
+  @for $column from 1 through $columns {
+    @include breakpoint($key) {
+      .col#{$column}-#{$key} {
+        @include colStyle;
+        @include col($column);
+      }
+      .right#{$column}-#{$key} { @include right($column); }
+      .left#{$column}-#{$key} { @include left($column); }
+    }
+  }
+}
