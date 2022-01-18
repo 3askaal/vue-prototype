@@ -23,7 +23,7 @@ export default class extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/main.scss";
+@import "../style/main.scss";
 
 .Row {
   display: flex;

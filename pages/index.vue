@@ -180,7 +180,7 @@ export default App
 </script>
 
 <style lang="scss" scoped>
-@import "./styles/main.scss";
+@import "./style/main.scss";
 
 body {
   line-height: 1;
