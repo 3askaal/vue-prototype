@@ -1,5 +1,5 @@
 <template>
-  <div class="Heading" :style="{'font-size': sizes[size]}">
+  <div v-style="'Heading'" :style="{'font-size': sizes[size]}">
     <slot></slot>
   </div>
 </template>
@@ -21,9 +21,7 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Heading {
   font-family: font(heading);
   display: flex;

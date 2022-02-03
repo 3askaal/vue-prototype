@@ -1,6 +1,6 @@
 <template>
-  <div class="Layout">
-    <div class="LayoutContainer">
+  <div v-style="'Layout'">
+    <div v-style="'LayoutContainer'">
       <slot></slot>
     </div>
   </div>
@@ -15,9 +15,7 @@ import { Vue, Component } from "vue-property-decorator";
 export default class extends Vue {}
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Layout {
   display: flex;
   align-items: center;

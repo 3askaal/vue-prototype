@@ -22,11 +22,12 @@ export default {
   css: [
     'normalize.css/normalize.css',
     'reset-css/reset.css',
+    '~/style/generic/index.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/emotion.ts'
+    '~/plugins/style.ts'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -49,7 +50,7 @@ export default {
 
   styleResources: {
     scss: [
-      '~/style/global.scss',
+      '~/style/main.scss',
     ]
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="Row"
+    v-style="'Row'"
     :style="{
       marginLeft: gutter && `-${ gutter / 2 }px`,
       marginRight: gutter && `-${ gutter / 2 }px`
@@ -22,9 +22,7 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Row {
   display: flex;
   flex-wrap: wrap;

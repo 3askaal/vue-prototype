@@ -1,5 +1,5 @@
 <template>
-  <div class="Bar">
+  <div v-style="'Bar'">
     <slot></slot>
   </div>
 </template>
@@ -13,9 +13,7 @@ import { Vue, Component } from 'vue-property-decorator'
 export default class extends Vue {}
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Bar {
   display: flex;
 

@@ -1,8 +1,7 @@
 <template>
   <button
-    class="Button"
+    v-style="['Button', block && 'ButtonBlock', disabled && 'ButtonDisabled']"
     :disabled="disabled"
-    :class="{'is-block': block, 'is-disabled': disabled }"
   >
     <slot></slot>
   </button>
@@ -21,9 +20,7 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Button {
   display: flex;
   justify-content: center;
@@ -40,11 +37,12 @@ export default class extends Vue {
   @include hover {
     background-color: transparent(primary);
   }
+}
 
-  .is-block {
-    display: flex;
-    width: 100%;
-  }
+.ButtonBlock {
+  display: flex;
+  width: 100%;
+  pointer-events: none;
 }
 
 .ButtonDisabled {

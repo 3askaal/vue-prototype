@@ -3,7 +3,6 @@
     <Checkbox
       v-for="(option, index) in options"
       :key="index"
-      class="mb-s"
       :name="'radio'"
       :option="option"
       @change="onChange"
@@ -52,6 +51,5 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
+<style lang="scss" module>
 </style>

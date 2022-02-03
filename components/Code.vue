@@ -1,5 +1,5 @@
 <template>
-  <pre class="Code" :class="{'is-block': block}">{{ formattedContent }}</pre>
+  <pre v-style="'Code'" :class="{'is-block': block}">{{ formattedContent }}</pre>
 </template>
 
 <script lang="ts">
@@ -31,9 +31,7 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Code {
   display: inline-block;
   font-family: fonts(code);

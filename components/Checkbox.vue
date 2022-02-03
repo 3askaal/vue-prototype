@@ -1,10 +1,11 @@
 <template>
   <label
-    class="Checkbox flex aic"
-    :class="{
-      'is-checked': checked,
-      'is-disabled': option.disabled
-    }"
+    v-style="[
+      'Checkbox',
+      checked && 'is-checked',
+      option.disabled && 'is-disabled',
+      'mb-s'
+    ]"
   >
     <input
       class="none"
@@ -13,10 +14,10 @@
       :disabled="option.disabled"
       @change="checked = $event.target.checked; $emit('change', option.value)"
     />
-    <div class="CheckboxInput mr-m">
-      <div class="CheckboxInputIndicator"></div>
+    <div v-style="'CheckboxInput mr-m'">
+      <div v-style="'CheckboxInputIndicator'"></div>
     </div>
-    <div class="CheckboxLabel">{{ option.label }}</div>
+    <div v-style="'CheckboxLabel'">{{ option.label }}</div>
   </label>
 </template>
 
@@ -33,10 +34,10 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Checkbox {
+  display: flex;
+  align-items: center;
   cursor: pointer;
 
   &:hover:not(.is-checked):not(.is-disabled) {

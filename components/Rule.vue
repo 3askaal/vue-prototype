@@ -1,10 +1,10 @@
 <template>
-  <div class="Rule">
-    <div class="RuleLine"></div>
-    <div class="RuleContent px-s" v-if="$slots.default">
+  <div v-style="'Rule'">
+    <div v-style="'RuleLine'"></div>
+    <div v-style="'RuleContent px-s'" v-if="$slots.default">
       <slot />
     </div>
-    <div class="RuleLine"></div>
+    <div v-style="'RuleLine'"></div>
   </div>
 </template>
 
@@ -17,9 +17,7 @@ import { Vue, Component } from 'vue-property-decorator'
 export default class extends Vue {}
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Rule {
   display: flex;
   width: 100%;

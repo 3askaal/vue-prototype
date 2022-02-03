@@ -1,6 +1,6 @@
 <template>
   <label
-    class="Radio flex aic"
+    v-style="'Radio flex aic'"
     :class="{
       'is-checked': option.value === picked,
       'is-disabled': option.disabled
@@ -15,10 +15,10 @@
       :disabled="option.disabled"
       @change="$event.target.checked && $emit('change', option.value)"
     />
-    <div class="RadioInput mr-m">
-      <div class="RadioInputIndicator"></div>
+    <div v-style="'RadioInput mr-m'">
+      <div v-style="'RadioInputIndicator'"></div>
     </div>
-    <div class="RadioLabel">{{ option.label }}</div>
+    <div v-style="'RadioLabel'">{{ option.label }}</div>
   </label>
 </template>
 
@@ -35,10 +35,10 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Radio {
+  display: flex;
+  align-items: center;
   cursor: pointer;
 
   &:hover:not(.is-checked):not(.is-disabled) {

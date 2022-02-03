@@ -1,6 +1,6 @@
 <template>
   <input
-    class="Input"
+    v-style="'Input'"
     :class="{'InputError': err}"
     :type="type"
     :name="name"
@@ -28,9 +28,7 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Input {
   display: flex;
   flex-basis: 100%;

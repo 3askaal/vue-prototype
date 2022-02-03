@@ -1,6 +1,6 @@
 <template>
   <div
-    class="Label"
+    v-style="'Label'"
     :class="{
       [`state-${state}`]: state,
       [`bg-${color}`]: color,
@@ -25,9 +25,7 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Label {
   display: inline-flex;
   align-items: center;

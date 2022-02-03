@@ -1,6 +1,6 @@
 <template>
   <div
-    class="Col"
+    v-style="'Col'"
     :style="{
       flex: width && `0 0 ${calcWidth()}`,
       maxWidth: width && calcWidth(),
@@ -34,9 +34,7 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Col {
   flex-grow: 1;
   flex-shrink: 1;

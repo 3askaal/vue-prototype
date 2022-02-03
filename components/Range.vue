@@ -1,16 +1,16 @@
 <template>
-  <div class="RangeWrapper">
-    <div class="Range">
+  <div v-style="'RangeWrapper'">
+    <div v-style="'Range'">
       <div
-        class="RangeDisabled RangeDisabledStart"
+        v-style="'RangeDisabled RangeDisabledStart'"
         :style="{ width: `calc(${minValue}% + 10px)` }"
       />
       <div
-        class="RangeDisabled RangeDisabledEnd"
+        v-style="'RangeDisabled RangeDisabledEnd'"
         :style="{ width: `calc(${100 - maxValue}% + 10px)` }"
       />
       <div
-        class="RangeActive"
+        v-style="'RangeActive'"
         :style="{
           'left': `${value.start}%`,
           'right': `${100 - value.end}%`,
@@ -18,7 +18,7 @@
       />
       <input
         type="range"
-        class="RangeInput"
+        v-style="'RangeInput'"
         :class="{'is-min': value.start < 10}"
         :style="{ left: `${minValue}%`, width: `${100 - (minValue + (100 - maxValue))}%` }"
         :value="value.start"
@@ -29,7 +29,7 @@
       />
       <input
         type="range"
-        class="RangeInput"
+        v-style="'RangeInput'"
         :class="{'is-max': value.end > 90}"
         :style="{ right: `${100 - maxValue}%`, width: `${100 - (minValue + (100 - maxValue))}%` }"
         :value="value.end"
@@ -76,9 +76,7 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .RangeWrapper {
   position: relative;
   height: 30px;

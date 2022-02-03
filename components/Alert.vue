@@ -1,5 +1,5 @@
 <template>
-  <div class="Alert" :class="{[`state-${state}`]: state}">
+  <div v-style="['Alert', state ? `state-${state}` : '']">
     <slot></slot>
   </div>
 </template>
@@ -16,9 +16,7 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Alert {
   border-radius: theme(radius);
   background-color: transparent(primary);

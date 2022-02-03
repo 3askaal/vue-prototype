@@ -1,5 +1,5 @@
 <template>
-  <div class="Select">
+  <div v-style="'Select'">
     <!-- <p v-if="hasLabel" class="InputLabel">{{startCase(toLower(name))}}</p> -->
     <select
       :multiple="multiple"
@@ -36,9 +36,7 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/main.scss";
-
+<style lang="scss" module>
 .Select {
   position: relative;
   padding: theme(padding);

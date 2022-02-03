@@ -1,13 +1,13 @@
 <template>
-  <div id="app">
+  <div v-style="'app'">
     <Layout>
       <Body>
 
         <Rule>Colors</Rule>
 
         <div class="flex wrap">
-          <span v-for="color in colors" :key="color" class="color">
-            <span class="color-indicator" :class="{[`bg-${color}`]: color}"></span>
+          <span v-for="color in colors" :key="color" v-style="'color'">
+            <span v-style="'color-indicator'" :class="{[`bg-${color}`]: color}"></span>
             <span :class="{[`color-${color}`]: color}">{{ color }}</span>
           </span>
         </div>
@@ -179,20 +179,20 @@ class App extends Vue {
 export default App
 </script>
 
-<style lang="scss" scoped>
-@import "./style/main.scss";
-
+<style lang="scss" module>
 body {
   line-height: 1;
 }
 
-#app {
+.app {
   font-family: fonts(base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   color: $white;
   background-color: $background;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .color {
