@@ -1,8 +1,5 @@
 <template>
-  <button
-    v-style="['Button', block && 'ButtonBlock', disabled && 'ButtonDisabled']"
-    :disabled="disabled"
-  >
+  <button v-style="['Button', block && 'ButtonBlock', disabled && 'ButtonDisabled']">
     <slot></slot>
   </button>
 </template>
@@ -42,13 +39,12 @@ export default class extends Vue {
 .ButtonBlock {
   display: flex;
   width: 100%;
-  pointer-events: none;
 }
 
 .ButtonDisabled {
-  pointer-events: none;
-  cursor: not-allowed;
   border-color: transparent(primary);
   color: transparent(primary);
+  cursor: not-allowed;
+  pointer-events: none;
 }
 </style>
