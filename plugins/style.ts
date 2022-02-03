@@ -6,10 +6,6 @@ Vue.directive('style', {
     const classNames = (isArray(binding.value) ? binding.value : binding.value.split(' '))
       .filter((value: any) => typeof value === 'string')
 
-    if (isArray(binding.value)) {
-      console.log(classNames)
-    }
-
     classNames.forEach((className) => applyStyling(className, el, vnode))
   }
 })
